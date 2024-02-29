@@ -1,0 +1,120 @@
+.education{
+    background-image: url(../../assets//education_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.education_container{
+    max-width: 768px;
+}
+
+.education_tabs{
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--mb-2);
+}
+
+.education_button{
+    font-size: var(--h3-fsz);
+    font-weight: var(--font-medium);
+    color: var(--title-color);
+    margin: 0 var(--mb-1);
+    cursor: pointer;
+}
+
+.education_button:hover{
+    color: var(--title-color-dark);
+}
+
+.education_icon{
+    font-size: 1.8rem;
+    margin-right: var(--mb-0-25);
+}
+
+.education_active{
+    color: var(--title-color-dark);
+}
+
+.education_sections{
+    display: grid;
+    grid-template-columns: 0.5fr;
+    justify-content: center;
+}
+
+.education_content{
+    display: none;
+}
+
+.education_content-active{
+    display: block;
+}
+
+.education_data{
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
+}
+
+.education_title{
+    font-size: var(--nrml-fsz);
+    font-weight: var(--font-medium);
+}
+
+.education_subtitle{
+    display: inline-block;
+    font-size: var(--small-fsz);
+    margin-bottom: var(--mb-1);
+}
+
+.education_calendar{
+    font-size: var(--small-fsz);
+}
+
+.education_rounder{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    margin-bottom: 2px;
+}
+
+.education_line{
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: var(--text-color);
+    transform: translate(6px, -7px);
+}
+
+/*Breakpoints*/
+@media screen and (max-width: 992px) {
+    .education_container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .education_container{
+        margin-left: var(--mb-1-5);
+        margin-right: var(--mb-1-5);
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .education{
+        background-image: none;
+    }
+    .education_sections{
+        grid-template-columns: initial;
+    }
+    .education_button{
+        margin: 0 var(--mb-0-75);
+    }
+  }
+  @media screen and (max-width: 350px) {
+    .education_data{
+        gap: 0.5rem;
+    }
+  }

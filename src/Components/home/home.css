@@ -1,0 +1,213 @@
+.home_container{
+    row-gap: 4.8rem;
+}
+
+.home_content{
+    grid-template-columns: 116px repeat(2,1fr);
+    padding-top: 3.5rem;
+    column-gap: 1.5rem;
+    align-items: center;
+}
+
+.home_social{
+    display: grid;grid-template-columns: max-content;
+    row-gap: 1rem;
+}
+
+.home_social-icon{
+    font-size: 1.85rem;
+    color: rgb(62, 60, 60);
+    transition: 0.9s;
+    border-radius: 60%;
+}
+
+.home_social-icon:hover{
+    box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.05), inset 4px 4px 6px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-shadow: 0 0 15px rgb(17, 255, 0), 0 0 25px rgb(13, 255, 0);
+    animation:  animate 1.5s linear infinite;
+    font-size: 2rem;
+    /* transform: scale(1.2);
+    color: rgb(13, 13, 13);
+    font-size: 2rem; */
+}
+
+@keyframes animate{
+    0%{
+        filter: hue-rotate(0);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.home_title{
+    font-size: var(--big-fsz);
+    margin-bottom: var(--mb-0-25);
+}
+
+.home_hand{
+    width: 58px;
+    height: 58px;
+    margin-left: 0.6rem;
+}
+
+.home_subtitle{
+    position: relative;
+    font-size: var(--h3-fsz);
+    padding-left: 5.4rem;
+    font-weight: var(--font-normal);
+    margin-bottom: var(--mb-1);
+}
+
+.home_subtitle::before{
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 1px;
+    background-color: var(--text-color);
+    left: 0;
+    top: 1rem;
+}
+
+.text_box h1{
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 110px;
+    background-image: linear-gradient(to left, rgba(39, 38, 38, 0), rgb(15, 14, 14));
+    color: transparent;
+    color: #fff;
+}
+
+.text_box h3{
+    font-size: 21px;
+    font-weight: 600;
+    padding-top: 0.4rem;
+}
+
+.text_box{
+    font-style: oblique;
+}
+
+.home_description{
+    max-width: 400px;
+    /* font-size: 1rem; */
+    margin-bottom: var(--mb-3);
+}
+.home_img{
+    background: url(../../assets//profile1.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 9px rgba(255 255 255 / 30%);
+    order: 1;
+    justify-self: center;
+    width: 420px;
+    height: 420px;
+    margin-left: 10px;
+    animation: profile_animate 8s ease-in-out infinite 1s;
+}
+
+@keyframes profile_animate{
+    0%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    50%{
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+
+.home_scroll{
+    margin-left: 9.3rem;
+}
+
+.wheel{
+    animation: scroll 2s ease infinite;
+}
+@keyframes scroll {
+    0%{
+        transform: translateY(0);
+    }
+    30%{
+        transform: translateY(3.75rem);
+    }
+}
+
+.home_scroll-name{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    margin-right: var(--mb-0-25);
+    margin-left: 2px;
+}
+
+.home_scroll-arrow{
+    font-size: 1.25rem;
+    color: var(--title-color);
+}
+
+@media screen and (max-width: 992px) {
+    .home_content{
+      grid-template-columns: 100px repeat(2,1fr);
+      column-gap: 1.25rem;
+    }
+    .home_hand{
+        width: 46px;
+        height: 46px;
+    }
+    .home_subtitle{
+        padding-left: 3.75rem;
+        margin-bottom: var(--mb-1);
+    }
+    .home_subtitle::before{
+        width: 42px;
+        top: 0.8rem;
+    }
+     .home_description{
+        max-width: initial;
+        margin-bottom: var(--mb-2-5);
+     }
+     .home_img{
+        width: 250px;
+        height: 250px;
+        box-shadow: inset 0 0 0 8px rgba(255 255 255 / 30%);
+     }
+     .home_scroll{
+        margin-left: 7.5rem;
+     }
+  }
+  @media screen and (max-width: 768px) {
+    .home_content{
+        grid-template-columns: 0.5fr 3fr;
+        padding-top: 3.5rem;
+    }
+    .home_img{
+        order: initial;
+        justify-self: initial;
+    }
+    .home_data{
+        grid-column: 1/3;
+    }
+    .home_img{
+        box-shadow: inset 0 0 0 6px rgba(255 255 255 / 30%);
+        width: 200px;
+        height: 200px;
+    }
+    .home_scroll{
+        display: none;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .home_img{
+      width: 180px;
+      height: 180px;
+    }
+    .home_hand{
+        width: 32px;
+        height: 32px;
+        display: none;
+    }
+  }
